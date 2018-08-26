@@ -1,7 +1,9 @@
 $(document).ready(function () {
 
-    particlesJS.load('home', 'particles.json', function () {})
+    /*------------ Particles Js ------------*/
+    particlesJS.load('home-particles', 'particles.json', function () {});
 
+    /*----------- Typed Js --------*/
     var options = {
         strings: ["I'm Shamim.", "I'm developer."],
         typeSpeed: 50,
@@ -13,10 +15,6 @@ $(document).ready(function () {
 
     var typed = new Typed("#typing-text", options);
 
-    /*--------------- Get Value For Active Nav ----------*/
-    var activeLi = $(".myNavbar ul li a")
-    var section = $(".section");
-    var navH = $("#myNav").height();
     /*--------------- Nav Sticy ----------------*/
     if ($(document).scrollTop() > 50) {
         $("#myNav").addClass("navBarStiky");
@@ -43,57 +41,81 @@ $(document).ready(function () {
 
         /*--------- Nav Active ------------*/
 
+        var activeLi = $(".myNavbar ul li a")
+        var section = $(".section");
+        var navH = $("#myNav").height();
+
         section.each(function () {
             var self = $(this);
-            
+
             if ((self.offset().top < (scrollPoint + navH)) && (scrollPoint < (self.offset().top + self.outerHeight()))) {
                 var targetId = "#" + self.attr("id") + "-link";
-                
+
                 activeLi.removeClass("active");
                 $(targetId).addClass("active");
             }
 
         });
     });
-    
 
-    
-    
     /*------------- Smooth Scroll ----------*/
     
-    var homeOffset = $("#home").offset().top;
+    /*--- Never Use ----*/
+/*    var homeOffset = $("#home").offset().top;
     var aboutUsOffset = $("#about-us").offset().top;
     var serviceOffset = $("#services").offset().top;
     var protfolioOffset = $("#protfolio").offset().top;
-    var contactOffset = $("#contact").offset().top;
+    var contactOffset = $("#contact").offset().top;*/
 
     $("#home-link").click(function () {
         $("html").stop().animate({
-            scrollTop: homeOffset
+            scrollTop: $("#home").offset().top
         }, 1000);
         return false;
     });
     $("#about-us-link").click(function () {
         $("html").stop().animate({
-            scrollTop: aboutUsOffset
+            scrollTop: $("#about-us").offset().top
         }, 1000);
         return false;
     });
     $("#services-link").click(function () {
         $("html").stop().animate({
-            scrollTop: serviceOffset
+            scrollTop: $("#services").offset().top
         }, 1000);
         return false;
     });
     $("#protfolio-link").click(function () {
         $("html").stop().animate({
-            scrollTop: protfolioOffset
+            scrollTop: $("#protfolio").offset().top
+        }, 1000);
+        return false;
+    });
+    $("#blog-link").click(function () {
+        $("html").stop().animate({
+            scrollTop: $("#blog").offset().top
         }, 1000);
         return false;
     });
     $("#contact-link").click(function () {
         $("html").stop().animate({
-            scrollTop: contactOffset
+            scrollTop: $("#contact").offset().top
+        }, 1000);
+        return false;
+    });
+    
+    /*------------ Menu Close -----------*/
+    $('.navbar-nav .nav-link').on('click', function() {
+       var toggle = $('.navbar-toggler').is(':visible');
+       if (toggle) {
+         $('.navbar-collapse').collapse('hide');
+       }
+      });
+
+    /*------------- About Us Down Arrow -----------*/
+    $("#about-us-down-btn").click(function () {
+        $("html").stop().animate({
+            scrollTop: $("#about-us").offset().top
         }, 1000);
         return false;
     });
@@ -106,8 +128,21 @@ $(document).ready(function () {
         return false;
     });
 
-
-
+    /*------------------ About Carousel -------------*/
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        loop: true,
+        items: 1,
+        margin: 10
+    });
+    /*owl.on('mousewheel', '.owl-stage', function (e) {
+        if (e.deltaY > 0) {
+            owl.trigger('next.owl');
+        } else {
+            owl.trigger('prev.owl');
+        }
+        e.preventDefault();
+    });*/
 
 
 });

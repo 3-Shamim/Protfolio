@@ -1,0 +1,14 @@
+@media all and (max-width: 767px) {
+    .contact-form {
+        border-left: none;
+        border-top: 1px solid #ddd;
+    }
+    .home-content h2 {
+        font-size: 34px;
+        min-height: 50px;
+    }
+}
+
+
+
+

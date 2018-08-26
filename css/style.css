@@ -1,54 +1,124 @@
-body {
-    
+body {}
+
+.read-more .more-btn {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
 }
-/**------ Slide To Top Area ------**/
-.slide-to-top{
-   	position: fixed;
-   	right: 20px;
-   	bottom: -55px;
-   	padding: 8px 14px;
-	font-size: 26px;
-   	color: #ffffff;
-   	background-color: black;
-   	transition: 1s;
-} 
-/*-------------- Navigation ---------*/
-.myNav {
-    background-color: rgba(255, 255, 255, 0.2);;
+
+.read-more .more-btn i {
+    position: absolute;
+    color: #000;
+    font-size: 14px;
+    top: 5px;
+    left: 85%;
+    opacity: 0;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+.read-more .more-btn:hover i {
+    opacity: 1;
+    left: 105%;
+}
+
+.myBtn {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 400;
+    min-width: 120px;
+    height: 50px;
+    padding: 0 5x;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #000;
+    cursor: pointer;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
 }
-.myNav a{
+
+.myBtn:hover {
+    color: #fff;
+    background-color: #000;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+.section-title h2 {
+    text-transform: capitalize;
+}
+
+/*------------ Cutomize Plugin -----------*/
+
+.progress-bar {
+    background-color: #000;
+}
+
+/*-------------- Navigation ---------*/
+
+.myNav {
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+.myNav a {
     color: #ffffff;
 }
-.myNavbar ul li a{
+
+.myNavbar ul li a {
     margin: 0 5px;
+    text-transform: capitalize;
     border-bottom: 1px solid transparent;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
 }
+
 .myNavbar ul li a:hover {
     border-bottom: 1px solid #ffffff;
 }
+
 .active {
-    border-bottom: 1px solid #ffffff!important;
+    border-bottom: 1px solid #ffffff !important;
 }
+
 .navbar-toggler-icon i {
     color: #ffffff;
 }
+
 .navBarStiky {
     background-color: #000000;
 }
+
 /*------ Initialize All Section --------*/
 
-.home, .about-us, .services, .protfolio, .contact {
+.home,
+.about-us,
+.services,
+.protfolio,
+.blog {
+    overflow: hidden;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /*------------ Home Section ------------*/
 
 .home {
-    overflow: hidden;
     position: relative;
+}
+
+.home-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background: url(../img/home-bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -56,7 +126,8 @@ body {
     background-attachment: fixed;
     z-index: 1;
 }
-.home::after {
+
+.home-particles::after {
     content: '';
     display: block;
     position: absolute;
@@ -68,59 +139,417 @@ body {
     opacity: 0.7;
     z-index: -1;
 }
+
 .home-content {
     text-align: center;
     position: absolute;
     min-width: 500px;
     top: 50%;
     left: 50%;
-    margin-left: -250px;
-    margin-top: -100px;
+    transform: translate(-50%, -50%);
     color: #ffffff;
 }
+
 .home-content h2 {
-    font-size: 64px;;
+    font-size: 64px;
     min-height: 80px;
 }
-.home-content ul {
-    
-}
+
 .home-content ul li {
     list-style: none;
     display: inline;
     margin: 5px
 }
+
 .home-content ul li a {
     display: inline-block;
     text-decoration: none;
     font-size: 24px;
     font-weight: 400;
     color: #ffffff;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
 }
+
 .home-content ul li a:hover {
     color: royalblue;
 }
 
+.down-btn {
+    position: absolute;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    bottom: 0;
+    left: 50%;
+    margin: 0 0 10px -20px;
+    width: 40px;
+    height: 60px;
+    border: 2px solid #000;
+    z-index: 1;
+}
+
+.down-btn:hover {
+    color: #000;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    60% {
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+.arrow {
+    margin-top: 20px;
+}
+
+.arrow i {
+    font-size: 20px;
+}
+
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+.curve {
+    overflow: hidden;
+    position: absolute;
+    height: 150px;
+    width: 100%;
+    bottom: 0;
+}
+
+.curve path {
+    fill: #fff;
+}
+
 /*------------ About Us -----------*/
+
 .about-us {
-    background-color: rebeccapurple;
+    background-color: #fff;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.about-content {
+    -ms-align-self: center;
+    align-self: center;
+    margin: 100px auto;
+}
+
+.about-us .left img {
+    width: 100%;
+    height: auto;
+}
+
+.about-us .head-text {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.about-us .head-text .title {
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.about-us .head-text .name {
+    font-size: 32px;
+}
+
+.about-us .head-text .designation {
+    color: #252525;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.about-us .description {
+    color: #797979;
+    letter-spacing: 1px;
+}
+
+.about-us .right .owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot span {
+    width: 20px;
+    border-radius: 0;
+    height: 5px;
+
+}
+
+.about-us .right .owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #000;
 }
 
 /*------------ Services -----------*/
+
 .services {
-    background-color: royalblue;
+    background-color: #f5f6fa;
+}
+.services-content {
+    margin: 100px auto;
+}
+.feature-box {
+    padding: 35px 8%;
+    text-align: center;
+    background-color: #fff;
+    margin: 15px 0;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 27px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 27px -3px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box .icon {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 50px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #000;
+    margin-bottom: 30px;
 }
 
 /*------------ Protfolio -----------*/
+
 .protfolio {
-    background-color: greenyellow;
+    background-color: #ffffff;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.protfolio-content {
+    -ms-align-self: center;
+    align-self: center;
+    margin: 100px auto;
+}
+
+.protfolio-item {
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+    margin: 20px 0;
+    text-align: center;
+    cursor: default;
+}
+
+.protfolio-item img {
+    width: 100%;
+    height: 250px;
+}
+
+.protfolio-item .overlay {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(75, 75, 75, 0.7);
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.protfolio-item:hover .overlay {
+    background-color: rgba(48, 152, 157, 0.4);
+}
+
+.protfolio-item a.info {
+    position: relative;
+    display: inline-block;
+    min-width: 150px;
+    height: 70px;
+    line-height: 70px;
+    top: 50%;
+    margin: -45px auto auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: normal;
+}
+
+.protfolio-item:hover a.info {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.protfolio-item a.info:hover {
+    box-shadow: 0 0 5px #fff;
+}
+
+/*------------ Blog -----------*/
+.blog {
+    background-color: #f5f6fa;
+}
+
+.blog-content {
+    margin: 100px auto;
+}
+
+.blog-item {
+    overflow: hidden;
+    background-color: #ffffff; 
+    border-radius: 5px;
+    margin: 15px 0;
+    -webkit-box-shadow: 0px 1px 27px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 27px -3px rgba(0, 0, 0, 0.2);
+}
+
+.blog-img img{
+   width: 100%; 
+}
+
+.blog-detials {
+    padding: 15px;
+}
+
+.post-meta {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #aaaaaa;
+}
+
+.post-meta a{
+    color: #000000;    
+    font-weight: 700;
+}
+
+.blog-detials h4{
+    font-size: 22px;
+}
+
+.blog-detials p{
+    font-size: 16px;
+    color: #666666;
 }
 
 /*------------ Contact -----------*/
 .contact {
-    background-color: lightseagreen;
+    background-color: #ffffff;
 }
+
+.contact-content {
+    margin: 100px auto auto;
+}
+
+.contact-box {
+    position: relative;
+    top: 60px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 27px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 27px -3px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info-box {
+    padding: 8%;
+}
+.contact-info {
+    display: flex;
+    margin: 10px 0;
+}
+.contact-info i{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.contact-info p {
+    margin: 10px 0 0 15px
+}
+
+.contact-form {
+    padding: 8%;
+    margin: 0;
+    border-left: 1px solid #ddd;
+}
+
+.contact-form form{
+    margin: 15px 0;
+}
+
+.contact-form form input, .contact-form form textarea {
+    border-radius: 0;
+}
+
+.contact-form .send{
+    margin: 15px 0;
+}
+
+/*----------- Footer -------------*/
+.footer {
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+    color: #ffffff;
+}
+
+/**------ Slide To Top Area ------**/
+a.slide-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: -55px;
+    padding: 8px 14px;
+    font-size: 26px;
+    color: #ffffff;
+    background-color: #a4b0be;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+
+
+
+
+
+
+
+
 
 
 

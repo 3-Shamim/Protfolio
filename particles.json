@@ -11,7 +11,7 @@
       "value": "#ffffff"
     },
     "shape": {
-      "type": "circle",
+      "type": "star",
       "stroke": {
         "width": 1,
         "color": "#dddddd"
@@ -78,6 +78,7 @@
         "mode": "push"
       },
       "resize": true
+        
     },
     "modes": {
       "grab": {
