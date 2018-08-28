@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
@@ -60,14 +61,14 @@
 
     <!------------- Main Content Start ------------->
 
-    <main role="main">
+    <main>
 
         <!------------- Home Section ------------->
 
         <div class="home section" id="home">
             <div class="home-particles " id="home-particles">
                 <div class="home-content">
-                    <h2 id="typing-text"></h2>
+                    <h2 id="typing-text" class="wow bounceInUp"></h2>
                     <ul>
                         <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href=""><i class="fab fa-twitter"></i></a></li>
@@ -88,10 +89,10 @@
 
             <div class="container about-content">
                 <div class="row">
-                    <div class="left col-md-6 col-sm-12">
+                    <div class="left col-md-6 col-sm-12 wow bounceInLeft">
                         <img src="img/owner.jpg" alt="owner image">
                     </div>
-                    <div class="right col-md-6 col-sm-12">
+                    <div class="right col-md-6 col-sm-12 wow bounceInRight">
                         <div class="owl-carousel owl-theme">
                             <div class="item p-3">
                                 <div class="head-text">
@@ -149,14 +150,14 @@
         <!------------- Services Section ------------->
         <div class="services section d-flex" id="services">
             <div class="container services-content align-self-center">
-                <div class="section-title text-center col-12 col-md-10 col-lg-7 mb-3 mx-auto">
+                <div class="section-title text-center col-12 col-md-10 col-lg-7 mb-3 mx-auto wow bounceInRight">
                     <h2>
                         My Services
                     </h2>
                     <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface.</p>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 wow zoomIn">
                         <div class="feature-box">
                             <i class="icon fas fa-pencil-ruler"></i>
                             <div class="feature-content">
@@ -168,7 +169,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 wow zoomIn">
                         <div class="feature-box">
                             <i class="icon fas fa-pencil-ruler"></i>
                             <div class="feature-content">
@@ -180,7 +181,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 wow zoomIn">
                         <div class="feature-box">
                             <i class="icon fas fa-pencil-ruler"></i>
                             <div class="feature-content">
@@ -192,7 +193,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 wow zoomIn">
                         <div class="feature-box">
                             <i class="icon fas fa-pencil-ruler"></i>
                             <div class="feature-content">
@@ -204,7 +205,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 wow zoomIn">
                         <div class="feature-box">
                             <i class="icon fas fa-pencil-ruler"></i>
                             <div class="feature-content">
@@ -216,7 +217,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 wow zoomIn">
                         <div class="feature-box">
                             <i class="icon fas fa-pencil-ruler"></i>
                             <div class="feature-content">
@@ -235,74 +236,115 @@
         <!------------- Protfolio Section ------------->
         <div class="protfolio section" id="protfolio">
             <div class="container protfolio-content">
-                <div class="section-title text-center col-12 col-md-10 col-lg-7 mb-3 mx-auto">
+                <div class="section-title text-center col-12 col-md-10 col-lg-7 mb-3 mx-auto wow bounceInLeft">
                     <h2>
                         Protfolio
                     </h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita esse tempore vitae repellat labore sed aperiam rem quasi, deserunt enim ut aliquam excepturi eaque iure, maxime at, suscipit accusantium!</p>
                 </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="protfolio-item">
-                            <img class="img-responsive" src="img/protfolio.jpg" alt="">
-                            <div class="overlay">
-                                <a class="info" href="">Show Details</a>
+                <div class="protfolio-box">
+                    <div class="protfolio-menu">
+                        <ul>
+                            <li><a class="active" href="" data-filter="">All</a></li>
+                            <li><a href="" data-filter=".graphics">Graphics</a></li>
+                            <li><a href="" data-filter=".web-design">Web Design</a></li>
+                        </ul>
+                    </div>
+                    <div class="row protfolio-item-box">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 wow zoomIn protfolio-item-content graphics">
+                            <div class="protfolio-item">
+                                <img class="img-responsive" src="img/graphics.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="">Show Details</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="protfolio-item">
-                            <img class="img-responsive" src="img/protfolio.jpg" alt="">
-                            <div class="overlay">
-                                <a class="info" href="">Show Details</a>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 wow zoomIn protfolio-item-content web-design">
+                            <div class="protfolio-item">
+                                <img class="img-responsive" src="img/web-design.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="">Show Details</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="protfolio-item">
-                            <img class="img-responsive" src="img/protfolio.jpg" alt="">
-                            <div class="overlay">
-                                <a class="info" href="">Show Details</a>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 wow zoomIn protfolio-item-content graphics">
+                            <div class="protfolio-item">
+                                <img class="img-responsive" src="img/graphics.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="">Show Details</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="protfolio-item">
-                            <img class="img-responsive" src="img/protfolio.jpg" alt="">
-                            <div class="overlay">
-                                <a class="info" href="">Show Details</a>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 wow zoomIn protfolio-item-content web-design">
+                            <div class="protfolio-item">
+                                <img class="img-responsive" src="img/web-design.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="">Show Details</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="protfolio-item">
-                            <img class="img-responsive" src="img/protfolio.jpg" alt="">
-                            <div class="overlay">
-                                <a class="info" href="">Show Details</a>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 wow zoomIn protfolio-item-content graphics">
+                            <div class="protfolio-item">
+                                <img class="img-responsive" src="img/graphics.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="">Show Details</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="protfolio-item">
-                            <img class="img-responsive" src="img/protfolio.jpg" alt="">
-                            <div class="overlay">
-                                <a class="info" href="">Show Details</a>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 wow zoomIn protfolio-item-content web-design">
+                            <div class="protfolio-item">
+                                <img class="img-responsive" src="img/web-design.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="">Show Details</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="protfolio-item">
-                            <img class="img-responsive" src="img/protfolio.jpg" alt="">
-                            <div class="overlay">
-                                <a class="info" href="">Show Details</a>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 wow zoomIn protfolio-item-content graphics">
+                            <div class="protfolio-item">
+                                <img class="img-responsive" src="img/graphics.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="">Show Details</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="protfolio-item">
-                            <img class="img-responsive" src="img/protfolio.jpg" alt="">
-                            <div class="overlay">
-                                <a class="info" href="">Show Details</a>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 wow zoomIn protfolio-item-content web-design">
+                            <div class="protfolio-item">
+                                <img class="img-responsive" src="img/web-design.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 wow zoomIn protfolio-item-content graphics">
+                            <div class="protfolio-item">
+                                <img class="img-responsive" src="img/graphics.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 wow zoomIn protfolio-item-content web-design">
+                            <div class="protfolio-item">
+                                <img class="img-responsive" src="img/web-design.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 wow zoomIn protfolio-item-content graphics">
+                            <div class="protfolio-item">
+                                <img class="img-responsive" src="img/graphics.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="">Show Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 wow zoomIn protfolio-item-content web-design">
+                            <div class="protfolio-item">
+                                <img class="img-responsive" src="img/web-design.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="">Show Details</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -313,14 +355,14 @@
         <!------------- Blog Section ------------->
         <div class="blog section d-flex" id="blog">
             <div class="container blog-content align-self-center">
-                <div class="section-title text-center col-12 col-md-10 col-lg-7 mx-auto mb-3">
+                <div class="section-title text-center col-12 col-md-10 col-lg-7 mx-auto mb-3 wow bounceInRight">
                     <h2>
                         Latest Blog
                     </h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis soluta non officiis eaque vero similique porro minima fugiat error saepe nesciunt ipsam suscipit earum facere, quo veniam, voluptates impedit modi.</p>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 wow zoomIn">
                         <div class="blog-item">
                             <div class="blog-img">
                                 <img src="img/blog.jpg" alt="">
@@ -338,7 +380,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 wow zoomIn">
                         <div class="blog-item">
                             <div class="blog-img">
                                 <img src="img/blog.jpg" alt="">
@@ -356,7 +398,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-12 col-lg-4">
+                    <div class="col-12 col-md-12 col-lg-4 wow zoomIn">
                         <div class="blog-item">
                             <div class="blog-img">
                                 <img src="img/blog.jpg" alt="">
@@ -380,7 +422,7 @@
         <!------------- Contact Section ------------->
         <div class="contact section d-flex" id="contact">
             <div class="container contact-content align-self-center">
-                <div class="section-title text-center col-12 col-md-10 col-lg-7 mx-auto mb-3">
+                <div class="section-title text-center col-12 col-md-10 col-lg-7 mx-auto mb-3 wow bounceInLeft">
                     <h2>
                         Contact Us
                     </h2>
@@ -388,63 +430,63 @@
                 </div>
                 <div class="contact-box">
                     <div class="row">
-                        <div class="col-md-6">
-                        <div class="contact-info-box">
-                            <h4>Get In Touch</h4>
-                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quod, doloribus minima! Assumenda, quis recusandae illo eaque voluptate totam quaerat, reiciendis reprehenderit fuga. Similique nesciunt atque iste. Ad, assumenda, nobis.</p>
-                            <div class="contact-info">
-                                <i class="fas fa-home"></i>
-                                <p>
-                                    Mouchak, Gazipur, Dhaka.
-                                </p>
-                            </div>
-                            <div class="contact-info">
-                                <i class="fas fa-mobile-alt"></i>
-                                <p>+88017465--4--</p>
-                            </div>
-                            <div class="contact-info">
-                                <i class="far fa-envelope"></i>
-                                <p>info@exmaple.com</p>
+                        <div class="col-md-6 wow bounceIn">
+                            <div class="contact-info-box">
+                                <h4>Get In Touch</h4>
+                                <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quod, doloribus minima! Assumenda, quis recusandae illo eaque voluptate totam quaerat, reiciendis reprehenderit fuga. Similique nesciunt atque iste. Ad, assumenda, nobis.</p>
+                                <div class="contact-info">
+                                    <i class="fas fa-home"></i>
+                                    <p>
+                                        Mouchak, Gazipur, Dhaka.
+                                    </p>
+                                </div>
+                                <div class="contact-info">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <p>+88017465--4--</p>
+                                </div>
+                                <div class="contact-info">
+                                    <i class="far fa-envelope"></i>
+                                    <p>info@exmaple.com</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="contact-form">
-                            <h4>Say Something</h4>
-                            <form action="">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Subject">
-                                </div>
-                                <textarea class="form-control" name="comment" placeholder="Desciption" cols="30" rows="4"></textarea>
-                                <div class="send">
-                                    <button type="submit" class="myBtn">Send</button>
-                                </div>
-                            </form>
+                        <div class="col-md-6 wow bounceIn">
+                            <div class="contact-form">
+                                <h4>Say Something</h4>
+                                <form action="#">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Subject">
+                                    </div>
+                                    <textarea class="form-control" name="comment" placeholder="Desciption" cols="30" rows="4"></textarea>
+                                    <div class="send">
+                                        <button class="myBtn" type="submit">Send</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Footer -->
         <div class="footer d-flex">
             <div class="container align-self-center my-5">
                 <div class="col-md-10 col-lg-7 col-12 text-center mx-auto">
                     <div class="section-title">
-                        <h2>protfolio</h2>
-                        <p>&copy; 2018 Shamim. All Rights Reserved</p>
+                        <h2 class="wow bounceIn">protfolio</h2>
+                        <p class="wow bounceIn">&copy; 2018 Shamim. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!--  Slide To Top -->
         <a class="slide-to-top" href="#"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
 
@@ -460,6 +502,8 @@
     <script src="js/particles.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/typed.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/isotope-docs.min.js"></script>
     <script src="js/main.js"></script>
 
 

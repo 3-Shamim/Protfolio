@@ -59,13 +59,13 @@ $(document).ready(function () {
     });
 
     /*------------- Smooth Scroll ----------*/
-    
-    /*--- Never Use ----*/
-/*    var homeOffset = $("#home").offset().top;
-    var aboutUsOffset = $("#about-us").offset().top;
-    var serviceOffset = $("#services").offset().top;
-    var protfolioOffset = $("#protfolio").offset().top;
-    var contactOffset = $("#contact").offset().top;*/
+
+    /*--- Never Use Like This ----*/
+    /*    var homeOffset = $("#home").offset().top;
+        var aboutUsOffset = $("#about-us").offset().top;
+        var serviceOffset = $("#services").offset().top;
+        var protfolioOffset = $("#protfolio").offset().top;
+        var contactOffset = $("#contact").offset().top;*/
 
     $("#home-link").click(function () {
         $("html").stop().animate({
@@ -103,14 +103,14 @@ $(document).ready(function () {
         }, 1000);
         return false;
     });
-    
+
     /*------------ Menu Close -----------*/
-    $('.navbar-nav .nav-link').on('click', function() {
-       var toggle = $('.navbar-toggler').is(':visible');
-       if (toggle) {
-         $('.navbar-collapse').collapse('hide');
-       }
-      });
+    $('.navbar-nav .nav-link').on('click', function () {
+        var toggle = $('.navbar-toggler').is(':visible');
+        if (toggle) {
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
 
     /*------------- About Us Down Arrow -----------*/
     $("#about-us-down-btn").click(function () {
@@ -143,6 +143,36 @@ $(document).ready(function () {
         }
         e.preventDefault();
     });*/
+
+    /*------------- Wow Init ------------*/
+
+    new WOW().init();
+
+    /*------------ Isotope --------------*/
+
+    $(".protfolio-item-box").isotope({
+        // options
+        itemSelector: ".protfolio-item-content",
+        layoutMode: 'fitRows'
+    });
+
+    $(".protfolio-menu ul li a").click(function () {
+        $(".protfolio-menu ul li a").removeClass("active");
+        $(this).addClass("active");
+
+        var selector = $(this).attr("data-filter");
+        $(".protfolio-item-box").isotope({
+            filter: selector
+        });
+        return false;
+    });
+
+
+
+
+
+
+
 
 
 });

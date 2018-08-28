@@ -27,26 +27,25 @@ body {}
 
 .myBtn {
     font-size: 18px;
+    text-decoration: none;
     text-transform: capitalize;
     font-weight: 400;
-    min-width: 120px;
-    height: 50px;
-    padding: 0 5x;
-    color: #000;
-    background-color: #fff;
+    padding: 10px 30px;
+    color: #000000;
+    background-color: #ffffff;
     border: 2px solid #000;
     cursor: pointer;
-    -webkit-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .myBtn:hover {
     color: #fff;
     background-color: #000;
-    -webkit-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .section-title h2 {
@@ -56,16 +55,16 @@ body {}
 /*------------ Cutomize Plugin -----------*/
 
 .progress-bar {
-    background-color: #000;
+    background-color: #000000;
 }
 
 /*-------------- Navigation ---------*/
 
 .myNav {
     background-color: rgba(255, 255, 255, 0.2);
-    -webkit-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .myNav a {
@@ -76,9 +75,9 @@ body {}
     margin: 0 5px;
     text-transform: capitalize;
     border-bottom: 1px solid transparent;
-    -webkit-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .myNavbar ul li a:hover {
@@ -135,7 +134,7 @@ body {}
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #000;
+    background-color: #000000;
     opacity: 0.7;
     z-index: -1;
 }
@@ -167,9 +166,9 @@ body {}
     font-size: 24px;
     font-weight: 400;
     color: #ffffff;
-    -webkit-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .home-content ul li a:hover {
@@ -179,19 +178,19 @@ body {}
 .down-btn {
     position: absolute;
     text-align: center;
-    color: #000;
+    color: #000000;
     text-decoration: none;
     bottom: 0;
     left: 50%;
     margin: 0 0 10px -20px;
     width: 40px;
     height: 60px;
-    border: 2px solid #000;
+    border: 2px solid #000000;
     z-index: 1;
 }
 
 .down-btn:hover {
-    color: #000;
+    color: #000000;
 }
 
 @keyframes bounce {
@@ -268,7 +267,7 @@ body {}
 }
 
 .about-us .head-text {
-    color: #000;
+    color: #000000;
     margin-bottom: 20px;
 }
 
@@ -303,7 +302,7 @@ body {}
 
 .about-us .right .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-    background: #000;
+    background: #000000;
 }
 
 /*------------ Services -----------*/
@@ -317,7 +316,7 @@ body {}
 .feature-box {
     padding: 35px 8%;
     text-align: center;
-    background-color: #fff;
+    background-color: #ffffff;
     margin: 15px 0;
     border-radius: 5px;
     -webkit-box-shadow: 0px 1px 27px -3px rgba(0, 0, 0, 0.2);
@@ -330,8 +329,8 @@ body {}
     line-height: 100px;
     font-size: 50px;
     border-radius: 50%;
-    color: #fff;
-    background-color: #000;
+    color: #ffffff;
+    background-color: #000000;
     margin-bottom: 30px;
 }
 
@@ -350,6 +349,43 @@ body {}
     -ms-align-self: center;
     align-self: center;
     margin: 100px auto;
+}
+
+.protfolio-menu {
+    text-align: center;
+}
+
+.protfolio-menu ul {
+    list-style: none;
+}
+
+.protfolio-menu ul li {
+    display: inline;
+}
+
+.protfolio-menu ul li a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 400;
+    padding: 10px 30px;
+    margin: 10px 0; 
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    cursor: pointer;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.protfolio-menu ul li a:hover, .protfolio-menu ul li a.active {
+    color: #ffffff;
+    background-color: #000000;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .protfolio-item {
@@ -380,21 +416,20 @@ body {}
 }
 
 .protfolio-item:hover .overlay {
-    background-color: rgba(48, 152, 157, 0.4);
+    background-color:  rgba(0, 23, 44, 0.9);;
 }
 
 .protfolio-item a.info {
-    position: relative;
+    position: absolute;
     display: inline-block;
-    min-width: 150px;
-    height: 70px;
-    line-height: 70px;
+    padding: 10px 30px;
     top: 50%;
-    margin: -45px auto auto;
+    left: 50%;
+    margin: -20px auto auto -87px;;
     text-decoration: none;
     text-transform: uppercase;
-    color: #fff;
-    border: 1px solid #fff;
+    color: #ffffff;
+    border: 1px solid #ffffff;
     opacity: 0;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
@@ -413,7 +448,7 @@ body {}
 }
 
 .protfolio-item a.info:hover {
-    box-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 5px #ffffff;
 }
 
 /*------------ Blog -----------*/
@@ -524,7 +559,7 @@ body {}
 .footer {
     width: 100%;
     height: 300px;
-    background-color: #000;
+    background-color: #000000;
     color: #ffffff;
 }
 
@@ -537,9 +572,9 @@ a.slide-to-top {
     font-size: 26px;
     color: #ffffff;
     background-color: #a4b0be;
-    -webkit-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 
