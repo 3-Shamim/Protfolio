@@ -6,13 +6,14 @@ body {}
     color: #000;
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 15px;
 }
 
 .read-more .more-btn i {
     position: absolute;
     color: #000;
     font-size: 14px;
-    top: 5px;
+    top: 2px;
     left: 85%;
     opacity: 0;
     -webkit-transition: .4s;
@@ -575,6 +576,11 @@ a.slide-to-top {
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
+}
+
+a.slide-to-top:hover {
+    color: #ffffff;
+    background-color: #8dd6f3;
 }
 
 
